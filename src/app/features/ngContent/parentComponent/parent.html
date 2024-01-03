@@ -3,7 +3,7 @@
         <mat-card-title >Ng Content</mat-card-title>
     </mat-card-header>
     <mat-card-content>
-        <app-child></app-child>
+        <app-child forContent [showNgContent]="showNgContent"></app-child>
     </mat-card-content>
     <button mat-raised-button  color="primary" (click)="parent()">Pass html to Child</button>
 </mat-card>

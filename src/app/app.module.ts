@@ -12,6 +12,7 @@ import { ChildComponent } from './features/ngContent/childComponent/child.compon
 import { ParentComponent } from './features/ngContent/parentComponent/parent.component';
 import { ViewChildComponent } from './features/viewchild/childComponent/child.component';
 import { ViewParentComponent } from './features/viewchild/parentComponent/parent.component';
+import { NgContentDirective } from './features/customeDirectives/ngContent.directive';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ViewParentComponent } from './features/viewchild/parentComponent/parent
     ChildComponent,
     ParentComponent,
     ViewChildComponent,
-    ViewParentComponent
+    ViewParentComponent,
+    NgContentDirective
   ],
   imports: [
     BrowserModule,

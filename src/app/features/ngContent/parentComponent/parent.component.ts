@@ -7,7 +7,9 @@ import { Component } from "@angular/core";
 
 export class ParentComponent{
 
+    showNgContent : boolean = false;
+
     parent(){
-        
+        this.showNgContent = true;
     }
 }
