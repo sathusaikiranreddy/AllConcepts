@@ -1,0 +1,10 @@
+<!-- <h1  @if(!showTitle)>{{title}} </h1> -->
+<h1 *ngIf="showTitle">{{title}} </h1>
+
+<ng-container *ngFor="let item of numSequence(5)">
+    
+    <!-- <app-stand></app-stand> -->
+</ng-container>
+
+<!--  -->
+<button mat-raised-button  color="primary" (click)="pageTitle()">Show Standalone Title</button>
