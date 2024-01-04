@@ -1,1 +1,5 @@
-<button mat-raised-button  color="primary" (click)="parent()">Add Decorator</button>
+
+<app-viewchild #child [countries]="countries"></app-viewchild>
+
+<input matInput placeholder="Enter country to add" [(ngModel)]="newCountry">
+<button mat-raised-button  color="primary" (click)="addToChild()">Add Country in Child</button>

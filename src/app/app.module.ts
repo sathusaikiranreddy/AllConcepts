@@ -13,6 +13,7 @@ import { ParentComponent } from './features/ngContent/parentComponent/parent.com
 import { ViewChildComponent } from './features/viewchild/childComponent/child.component';
 import { ViewParentComponent } from './features/viewchild/parentComponent/parent.component';
 import { NgContentDirective } from './features/customeDirectives/ngContent.directive';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { NgContentDirective } from './features/customeDirectives/ngContent.direc
     BrowserModule,
     AppRoutingModule,
     CommonModule,
+    FormsModule,
     AppMaterialModule,
     StandAloneComponent
   ],
