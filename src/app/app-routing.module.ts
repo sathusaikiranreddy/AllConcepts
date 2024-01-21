@@ -1,13 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CustomeDecoratorComponent } from './features/customeDecorators/deco.component';
-import { ViewParentComponent } from './features/viewchild/parentComponent/parent.component';
-import { ParentComponent } from './features/ngContent/parentComponent/parent.component';
+import { DashboardComponent } from './features/dashboard/dashboard.component';
+import { Login } from './features/login/login.component';
 
 const routes: Routes = [
-  {path:"customDeco", component:CustomeDecoratorComponent},
-  {path:"viewChild", component: ViewParentComponent},
-  {path:"ngContent", component: ParentComponent},
+  {path:"", pathMatch:"full",redirectTo:"/login"},
+  {path:"login", component:Login},
+  {path:"allConcepts", component: DashboardComponent},
 ];
 
 @NgModule({

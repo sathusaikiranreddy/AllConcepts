@@ -12,18 +12,24 @@ export class AppComponent {
 
   constructor(private _router : Router){}
 
-  deco(){
-    this.showDeco = false;
-    this._router.navigateByUrl("/customDeco");
-  }
+  // deco(){
+  //   this.showDeco = false;
+  //   this._router.navigateByUrl("/dashboard");
+  // }
 
-  ngContent(){
-    this._router.navigateByUrl("/ngContent");
-  }
+  // ngContent(){
+  //   this._router.navigateByUrl("/ngContent");
+  // }
 
-  viewChild(){
-    this._router.navigateByUrl("/viewChild");
-  }
+  // viewChild(){
+  //   this._router.navigateByUrl("/viewChild");
+  // }
+
+  // rxjs(){
+  //   this._router.navigateByUrl("/rxjs");
+  // }
+
+
 
 
 }
