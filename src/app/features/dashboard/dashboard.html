@@ -1,11 +1,37 @@
-<h1>This dashboard</h1>
-<h2>{{counter}}</h2>
+<mat-toolbar color="primary">
+    <!-- <button mat-icon-button (click)="snav.toggle()">
+        <mat-icon>menu</mat-icon>
+    </button> -->
+    <span>User Management</span>
+    <a mat-button (click)="home()">Home</a>
+    <a mat-button (click)="ngContent()">Ng Content</a>
+    <a mat-button (click)="rxjs()">Rxjs</a>
+    <a mat-button (click)="login()">Logout</a>
+</mat-toolbar>
 
+<mat-sidenav-container class="example-sidenav-container" >
+    <mat-sidenav #snav mode="side"
+       >
+        <mat-nav-list >
+            <!-- @for (nav of fillerNav; track nav) {
+            <a mat-list-item routerLink=".">{{nav}}</a>
+            } -->
+        </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+        <!-- @for (content of fillerContent; track content) {
+        <p>{{content}}</p>
+        } -->
+    </mat-sidenav-content>
+</mat-sidenav-container>
+<router-outlet></router-outlet>
+<!-- <br>
+<h1>{{counter}}</h1>
 <button mat-raised-button color="primary" (click)="increment()">Increment</button>&nbsp;
 <button mat-raised-button color="primary" (click)="decrement()">Decrement</button>&nbsp;
-<button mat-raised-button color="primary" (click)="reset()">Reset</button>&nbsp;
-<button mat-raised-button color="primary" (click)="login()">Redirect to Login</button>&nbsp;
-<br>
-<button mat-raised-button color="primary" (click)="ngContent()">Redirect to NgContent</button>&nbsp;
+<button mat-raised-button color="primary" (click)="reset()">Reset</button>&nbsp; -->
+
+
 <!-- <app-stand></app-stand> -->
 <!-- <router-outlet></router-outlet> -->

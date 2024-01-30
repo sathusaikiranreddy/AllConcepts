@@ -35,6 +35,7 @@ export class Login {
     }
 
     login(){
+        this._router.navigateByUrl("/allConcepts");
         this._loginServ.login(this.loginForm.value);
     }
 }

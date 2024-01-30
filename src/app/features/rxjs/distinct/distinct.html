@@ -1,0 +1,17 @@
+<mat-list dense>
+    <mat-list-item *ngFor="let item of distinctData">
+        {{item.id}} + {{item.name}}
+    </mat-list-item>
+</mat-list>
+<div>
+    <mat-form-field>
+        <mat-label>Distinct Until Changed</mat-label>
+        <input matInput [(ngModel)]="searchValue" (ngModelChange)="distinctUnitilChanged($event)" >
+    </mat-form-field>
+    <button mat-raised-button color="primary" (click)="distinctUnitilChanged($event)">Search</button>
+</div>
+<div>
+    Changed Value is {{changedValue}}
+</div>
+<button mat-raised-button color="primary" (click)="back()">Back</button>
+<button mat-raised-button color="primary" (click)="cancel()">Cancel</button>

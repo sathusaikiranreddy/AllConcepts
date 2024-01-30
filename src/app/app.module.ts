@@ -15,6 +15,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DashboardModule } from './features/dashboard/dashboard.module';
 import { StoreModule } from '@ngrx/store';
 import { counterReducer } from './features/counterNgrx/counterReducer';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { environment } from 'environments/environment';
+import { AppReducer } from './features/ngrx/ngrxState';
 
 
 @NgModule({
@@ -35,7 +38,11 @@ import { counterReducer } from './features/counterNgrx/counterReducer';
     // this is the way to add reducer here counter is name given to access in component and counterReducer is 
     // function that return reducers functions. u can add another reducer like 
     // {counter : counterReducer, post : postReducer}
-    StoreModule.forRoot({counter : counterReducer})
+    StoreModule.forRoot(AppReducer),
+    StoreDevtoolsModule.instrument({
+      maxAge:25,
+      logOnly:environment.production
+    })
   ],
   providers: [LoginService],
   bootstrap: [AppComponent]

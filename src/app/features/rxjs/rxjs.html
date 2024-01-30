@@ -2,3 +2,19 @@
 </h1>
 
 <img [src]="image" alt="this is an image">
+
+<mat-list>
+  <mat-list-item>
+    <span matListItemTitle [routerLink]="['/allConcepts/rxjs/buffer']" routerLinkActive="router-link-active">Buffer</span>
+  </mat-list-item>
+  <mat-list-item [routerLink]="['/allConcepts/rxjs/take']" routerLinkActive="router-link-active" >Take</mat-list-item>
+  <mat-list-item [routerLink]="['/allConcepts/rxjs/skip']" routerLinkActive="router-link-active">Skip</mat-list-item>
+  <mat-list-item [routerLink]="['/allConcepts/rxjs/distinct']" routerLinkActive="router-link-active">Distinct</mat-list-item>
+  <mat-list-item [routerLink]="['/allConcepts/rxjs/higherOrder']" routerLinkActive="router-link-active">Higher Order</mat-list-item>
+
+  <mat-list-item>Also the title</mat-list-item>
+
+</mat-list>
+
+<button id="button" mat-raised-button  color="primary">Event</button>
+<button mat-raised-button color="primary" (click)="cancel()">Cancel Observable</button>
