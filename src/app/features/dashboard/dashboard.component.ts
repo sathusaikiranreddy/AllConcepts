@@ -1,4 +1,5 @@
-import { Component } from "@angular/core";
+import { Component, ViewChild } from "@angular/core";
+import { MatSidenav } from "@angular/material/sidenav";
 import { Router } from "@angular/router";
 import { Store } from "@ngrx/store";
 import { Observable } from "rxjs";
@@ -9,13 +10,16 @@ import { AppReducer, AppState, Post, PostState } from "../ngrx/ngrxState";
 
 @Component({
     selector : "app-dashboard",
-    templateUrl:"./dashboard.html"
+    templateUrl:"./dashboard.html",
+    styleUrls:["./dashboard.css"]
 })
 
 
 export class DashboardComponent{
       counter :  number = 0;
       posts! : Observable<Post[]>;
+
+    //  @ViewChild('sidenav') sidenav !: MatSidenav;
   // here  Store<{counter:{counter : number}}>  counter means the word give in appmodule and obj is initial state
     constructor(private _router : Router, private _store : Store<AppState>){}
 
@@ -60,4 +64,8 @@ export class DashboardComponent{
       rxjs(){
         this._router.navigateByUrl("/allConcepts/rxjs");
       }
+
+      // toggle(){
+      //   this.sidenav.toggle();
+      // }
 }

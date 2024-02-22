@@ -24,8 +24,13 @@ import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatTableModule } from "@angular/material/table";
 import { MatTooltipModule } from "@angular/material/tooltip";
 import { MatExpansionModule } from "@angular/material/expansion";
-import { MatNativeDateModule, MatOptionModule } from '@angular/material/core';
+import { MatNativeDateModule, MatOptionModule, MatRippleModule } from '@angular/material/core';
 import { MatBottomSheet, MatBottomSheetModule } from '@angular/material/bottom-sheet';
+import { CdkTableModule } from '@angular/cdk/table';
+import { MatSortModule } from '@angular/material/sort';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatDividerModule } from '@angular/material/divider';
+//import { MatButtonToggleModule, MatStepperModule } from '@angular/material';
 
 @NgModule({
     imports: [
@@ -58,9 +63,23 @@ import { MatBottomSheet, MatBottomSheetModule } from '@angular/material/bottom-s
         MatExpansionModule,
         // MatDatetimepickerModule,
         // MatNativeDatetimeModule,
-        MatBottomSheetModule
+        MatBottomSheetModule,
+        MatDividerModule,
+        MatPaginatorModule,
+        MatRippleModule, 
+        MatSortModule,
+        // MatButtonToggleModule,
+        // MatStepperModule,
+      
     ],
-    exports: [
+    exports: [   
+        // MatButtonToggleModule,  
+        // MatStepperModule,
+        MatDividerModule, 
+        MatPaginatorModule,
+        MatRippleModule,
+        MatSortModule, 
+        CdkTableModule,
         MatButtonModule,
         MatCheckboxModule,
         MatToolbarModule,

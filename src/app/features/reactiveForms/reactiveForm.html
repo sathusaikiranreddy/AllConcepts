@@ -1,0 +1,46 @@
+
+<form [formGroup]="userDetails" (ngSubmit)="save()">
+    <mat-form-field>
+        <mat-label>First Name</mat-label>
+        <input matInput formControlName="firstName">
+    </mat-form-field>&nbsp;
+    <mat-form-field>
+        <mat-label>Last Name</mat-label>
+        <input matInput formControlName="firstName">
+    </mat-form-field>&nbsp;
+    <mat-form-field>
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="firstName">
+    </mat-form-field>&nbsp;
+   
+        <button class="btn" mat-raised-button (click)="addAddress()" color="primary">Add Address</button>
+   
+    <div formArrayName="address">
+        <div *ngFor="let item of addressArray.controls, let i = index">
+            <div [formGroupName]="i">
+                <mat-form-field>
+                    <mat-label>Plot No.</mat-label>
+                    <input matInput formControlName="plotNo">
+                </mat-form-field>&nbsp;
+                <mat-form-field>
+                    <mat-label>Street</mat-label>
+                    <input matInput formControlName="street">
+                </mat-form-field>&nbsp;
+                <mat-form-field>
+                    <mat-label>City</mat-label>
+                    <input matInput formControlName="city">
+                </mat-form-field>&nbsp;
+                <mat-form-field>
+                    <mat-label>State</mat-label>
+                    <input matInput formControlName="state">
+                </mat-form-field>&nbsp;
+
+                <button mat-raised-button (click)="deleteFormRow(i)" color="primary">Delete</button>
+            </div>
+            
+        </div>
+    </div>
+    <div *ngIf="addressArray.controls.length > 0">
+        <button mat-raised-button type="submit" color="primary">Submit</button>
+    </div>
+</form>

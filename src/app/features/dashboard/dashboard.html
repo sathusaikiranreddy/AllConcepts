@@ -1,7 +1,5 @@
 <mat-toolbar color="primary">
-    <!-- <button mat-icon-button (click)="snav.toggle()">
-        <mat-icon>menu</mat-icon>
-    </button> -->
+    <button mat-icon-button (click)="sidenav.toggle()"><mat-icon>menu</mat-icon></button>
     <span>User Management</span>
     <a mat-button (click)="home()">Home</a>
     <a mat-button (click)="ngContent()">Ng Content</a>
@@ -10,22 +8,34 @@
 </mat-toolbar>
 
 <mat-sidenav-container class="example-sidenav-container" >
-    <mat-sidenav #snav mode="side"
-       >
+    <mat-sidenav #sidenav mode="over">
         <mat-nav-list >
-            <!-- @for (nav of fillerNav; track nav) {
-            <a mat-list-item routerLink=".">{{nav}}</a>
-            } -->
+           <a mat-list-item routerLink="./reactiveForm">Reactive Form</a>
         </mat-nav-list>
     </mat-sidenav>
 
-    <mat-sidenav-content>
-        <!-- @for (content of fillerContent; track content) {
-        <p>{{content}}</p>
-        } -->
+    <mat-sidenav-content >
+    <mat-card>
+        <!-- <mat-card-header>
+            <mat-card-title>Title</mat-card-title>
+            <mat-card-subtitle>Subtitle</mat-card-subtitle>
+        </mat-card-header>
+        <img matCardImage src="Card wide image source"> -->
+        <mat-card-content >
+            <router-outlet></router-outlet>
+        </mat-card-content>
+        <!-- <mat-card-actions align="start">
+            <button mat-button (click)="onAction1">Action1</button>
+            
+        </mat-card-actions>
+        <mat-card-footer>
+            Footer
+        </mat-card-footer> -->
+    </mat-card>
+       
     </mat-sidenav-content>
 </mat-sidenav-container>
-<router-outlet></router-outlet>
+
 <!-- <br>
 <h1>{{counter}}</h1>
 <button mat-raised-button color="primary" (click)="increment()">Increment</button>&nbsp;

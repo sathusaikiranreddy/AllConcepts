@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CustomeDecoratorComponent } from '../customeDecorators/deco.component';
 import { HomeComponent } from '../home/home.component';
 import { ParentComponent } from '../ngContent/parentComponent/parent.component';
+import { ReactiveFormComponent } from '../reactiveForms/reactiveForm.component';
 import { ViewParentComponent } from '../viewchild/parentComponent/parent.component';
 import { DashboardComponent } from './dashboard.component';
 
@@ -15,6 +16,7 @@ const routes: Routes = [
             {path:"ngContent", component:ParentComponent},
             {path:"viewChild", component:ViewParentComponent},
             {path:"home", component:HomeComponent},
+            {path:"reactiveForm", component:ReactiveFormComponent},
             {path:"rxjs", loadChildren:()=> import("../rxjs/rxjs.module").then(m => m.RxjsModule)},
             // {path: "ngContent", loadChildren:()=> import("../ngContent").then(m => m.RxjsModule)}
         ]
